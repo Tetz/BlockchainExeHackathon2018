@@ -59,6 +59,7 @@ pre {
   padding: 5px;
   background: #e74c3c;
   font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  z-index: 2;
 }
 
 .navbar a {
@@ -117,7 +118,7 @@ td, th {
 
 .button1 {
     border: none;
-    background-color: #4CAF50; /* Green */
+    background-color: #20BDFF; 
     color: white;
     padding: 15px;
     border-radius: 4px;
