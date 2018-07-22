@@ -25,6 +25,7 @@ class LgBarChart extends Component {
         {"time": "23:00", "row": 4}
     ]
 
+
     return ( 
       <div>
         <BarChart width={320} height={200} data={data4}
@@ -34,7 +35,7 @@ class LgBarChart extends Component {
         <YAxis/>
         <Tooltip/>
         <Legend />
-        <Bar dataKey="row" fill="#82ca9d" />
+        <Bar dataKey="row" fill="#20BDFF" />
         </BarChart>
       </div>
     )
@@ -106,7 +107,7 @@ class SimpleBarChart extends Component {
         <YAxis/>
         <Tooltip/>
         <Legend />
-        <Bar dataKey="row" fill="#82ca9d" />
+        <Bar dataKey="row" fill="#20BDFF" />
         </BarChart>
       </div>
     )
@@ -131,8 +132,8 @@ const QPTcard = (props) => (
         />
         {props.component}
         <CardActions style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <FlatButton label="BUY QPT" primary={true} style={{ margin: '0 26px' }} onClick={props.dialog} />
-          <FlatButton label="DETAILE" primary={true} style={{ margin: '0 26px' }}/>
+          <FlatButton label="BUY QPT" secondary={true} style={{ margin: '0 26px' }} onClick={props.dialog} />
+          <FlatButton label="DETAILE" secondary={true} style={{ margin: '0 26px' }}/>
         </CardActions>
       </Card>
 )
