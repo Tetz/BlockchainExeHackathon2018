@@ -1,4 +1,4 @@
-import JsonRpcClient from './../../util/react-jsonrpc-client/jsonrpcclient.js'
+import JsonRpcClient from './../../util/jsonrpcclient.js'
 
 export function predictQueueLength() {
   console.log("predictQueueLength")
