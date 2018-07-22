@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { Dialog, FlatButton, RaisedButton } from 'material-ui'
 import QPTcards from '../../components/QPTcards';
 import Form from '../AttestationForm'
+import { qptContract } from '../dashboard/actions'
+import { predictQueueLength } from './actions'
 
 class Market extends Component {
   constructor(props, {authData}) {
@@ -32,6 +34,10 @@ class Market extends Component {
         <RaisedButton label="Buy" primary={true} type="submit" ></RaisedButton>
       </div>
     ]
+    
+    console.log(qptContract)
+    predictQueueLength()
+
 
     return(
       <main className="container" >
