@@ -106,6 +106,14 @@ td, th {
     padding: 8px;
 }
 
+.td-1{
+    font-size: 30px;
+    border: 2px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+
 /* Button */
 .button {
     text-align: center;

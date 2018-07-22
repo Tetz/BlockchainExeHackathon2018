@@ -156,100 +156,100 @@ class Dashboard extends Component {
     return(
       <main className="container">
 
-      <Modal
-        isOpen={this.state.modalIsOpen}
-        onAfterOpen={this.afterOpenModal}
-        onRequestClose={this.closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <h2 ref={subtitle => this.subtitle = subtitle}>Quick-Pass</h2>
-        <div>Now you can skip the line.</div>
-        <button className="button button2" onClick={this.closeModal}>close</button>
-        <button className="button button2" onClick={() => {useQptRequest(this.state.tokenNum)}}>send token</button>
-      </Modal>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          <h2 ref={subtitle => this.subtitle = subtitle}>Quick-Pass</h2>
+          <div>Now you can skip the line.</div>
+          <button className="button button2" onClick={this.closeModal}>close</button>
+          <button className="button button2" onClick={() => {useQptRequest(this.state.tokenNum)}}>send token</button>
+        </Modal>
 
-      <div className="pure-g">
-      <div
-      style={{
-        display: "inline-block",
-        margin: "0 auto",
-        padding: 30,
-        width:"980px"
-      }}
-         >
-          <div className="pure-u-1-1">
-            <h1>Dashboard</h1>
-            <img src={avatar}
-              style={{
-                border: "2px solid #FFF",
-                borderRadius: 99999,
-                boxShadow: "2px 3px 1px #000",
-                width:"150px"
-              }}
-            />
-            <h2>{this.props.authData.name}</h2>
-            <div
-              style={{
-                display: "inline-block",
-                float:"left",
-                width:"25%"
-              }}
-      >
-      <h3>phone:{this.props.authData.phone}</h3>
-      <h3>email: {this.props.authData.email}</h3>
+        <div className="pure-g">
+          <div
+            style={{
+              display: "inline-block",
+              margin: "0 auto",
+              padding: 30,
+              width:"980px"
+            }}
+          >
+            <div className="pure-u-1-1">
+              <h1>Dashboard</h1>
+              <img src={avatar}
+                   style={{
+                     border: "2px solid #FFF",
+                     borderRadius: 99999,
+                     boxShadow: "2px 3px 1px #000",
+                     width:"150px"
+                   }}
+              />
+              <h2>{this.props.authData.name}</h2>
+              <div
+                style={{
+                  display: "inline-block",
+                  float:"left",
+                  width:"25%"
+                }}
+              >
+                <h3>phone:{this.props.authData.phone}</h3>
+                <h3>email: {this.props.authData.email}</h3>
+              </div>
+              <div
+                style={{
+                  marginTop: "-300px",
+                  display: "inline-block",
+                  float:"left",
+                  width:"70%"
+                }}
+              >
+                <h2> My Quick-Pass Tokens </h2>
+                <h4> Wallet Address: {addressDecode.address} </h4>
+                <table id="token-table">
+                  <tr>
+                    <th>Spot Name</th>
+                    <th>Quick-Pass Amount</th>
+                    <th>Action</th>
+                  </tr>
+                  <tr>
+                    <td> Yajima (Sushi restaurant)</td>
+                    <td className="td-1">{amount1}</td>
+                    <td><button onClick={() => {this.changeToken('0')}} className="button button1">Use Quick-Pass Token</button></td>
+                  </tr>
+                  <tr>
+                    <td> Ippudo (Noodle restaurant)</td>
+                    <td className="td-1">0</td>
+                    <td><button onClick={() => {this.changeToken('1')}} className="button button1">Use Quick-Pass Token</button></td>
+                  </tr>
+                  <tr>
+                    <td> SkyTree (Tourist Spot)</td>
+                    <td className="td-1">0</td>
+                    <td><button onClick={() => {this.changeToken('2')}} className="button button1">Use Quick-Pass Token</button></td>
+                  </tr>
+                  <tr>
+                    <td> Tempura Kondo (Tempura restaurant)</td>
+                    <td className="td-1">0</td>
+                    <td><button onClick={() => {this.changeToken('3')}} className="button button1">Use Quick-Pass Token</button></td>
+                  </tr>
+                  <tr>
+                    <td> Kabuki (Entertainment)</td>
+                    <td className="td-1">0</td>
+                    <td><button onClick={() => {this.changeToken('4')}} className="button button1">Use Quick-Pass Token</button></td>
+                  </tr>
+                  <tr>
+                    <td> Cure Maid Cafe (Cafe)</td>
+                    <td className="td-1">0</td>
+                    <td><button onClick={() => {this.changeToken('5')}} className="button button1">Use Quick-Pass Token</button></td>
+                  </tr>
+                </table>
+              </div>
             </div>
-            <div
-              style={{
-                marginTop: "-300px",
-                display: "inline-block",
-                float:"left",
-                width:"70%"
-              }}
-      >
-      <h2> My Quick-Pass Tokens </h2>
-      <h4> Wallet Address: {addressDecode.address} </h4>
-      <table id="token-table">
-      <tr>
-      <th>Spot Name</th>
-      <th>Quick-Pass Amount</th>
-      <th>Action</th>
-      </tr>
-      <tr>
-      <td> Yajima (Sushi restaurant)</td>
-      <td>{amount1}</td>
-      <td><button onClick={() => {this.changeToken('0')}} className="button button1">Use Quick-Pass Token</button></td>
-      </tr>
-      <tr>
-      <td> Ippudo (Noodle restaurant)</td>
-      <td>1</td>
-      <td><button onClick={() => {this.changeToken('1')}} className="button button1">Use Quick-Pass Token</button></td>
-      </tr>
-      <tr>
-      <td> SkyTree (Tourist Spot)</td>
-      <td>1</td>
-      <td><button onClick={() => {this.changeToken('2')}} className="button button1">Use Quick-Pass Token</button></td>
-      </tr>
-      <tr>
-      <td> Tempura Kondo (Tempura restaurant)</td>
-      <td>1</td>
-      <td><button onClick={() => {this.changeToken('3')}} className="button button1">Use Quick-Pass Token</button></td>
-      </tr>
-      <tr>
-      <td> Kabuki (Entertainment)</td>
-      <td>1</td>
-      <td><button onClick={() => {this.changeToken('4')}} className="button button1">Use Quick-Pass Token</button></td>
-      </tr>
-      <tr>
-      <td> Cure Maid Cafe (Cafe)</td>
-      <td>1</td>
-      <td><button onClick={() => {this.changeToken('5')}} className="button button1">Use Quick-Pass Token</button></td>
-      </tr>
-      </table>
-      </div>
-      </div>
-      </div>
-      </div>
+          </div>
+        </div>
       </main>
     )
   }
