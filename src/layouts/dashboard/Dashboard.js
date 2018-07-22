@@ -222,27 +222,27 @@ class Dashboard extends Component {
                   </tr>
                   <tr>
                     <td> Ippudo (Noodle restaurant)</td>
-                    <td className="td-1">1</td>
+                    <td className="td-1">0</td>
                     <td><button onClick={() => {this.changeToken('1')}} className="button button1">Use Quick-Pass Token</button></td>
                   </tr>
                   <tr>
                     <td> SkyTree (Tourist Spot)</td>
-                    <td className="td-1">1</td>
+                    <td className="td-1">0</td>
                     <td><button onClick={() => {this.changeToken('2')}} className="button button1">Use Quick-Pass Token</button></td>
                   </tr>
                   <tr>
                     <td> Tempura Kondo (Tempura restaurant)</td>
-                    <td className="td-1">1</td>
+                    <td className="td-1">0</td>
                     <td><button onClick={() => {this.changeToken('3')}} className="button button1">Use Quick-Pass Token</button></td>
                   </tr>
                   <tr>
                     <td> Kabuki (Entertainment)</td>
-                    <td className="td-1">1</td>
+                    <td className="td-1">0</td>
                     <td><button onClick={() => {this.changeToken('4')}} className="button button1">Use Quick-Pass Token</button></td>
                   </tr>
                   <tr>
                     <td> Cure Maid Cafe (Cafe)</td>
-                    <td className="td-1">1</td>
+                    <td className="td-1">0</td>
                     <td><button onClick={() => {this.changeToken('5')}} className="button button1">Use Quick-Pass Token</button></td>
                   </tr>
                 </table>
