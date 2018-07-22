@@ -43,8 +43,7 @@ class Market extends Component {
             >
               <Form/>
           </Dialog>
-        <FlatButton onClick={() => {this.dialogOpen()} } label="オープン"></FlatButton>
-        <QPTcards/>
+        <QPTcards dialog={this.dialogOpen} />
       </main>
     )
   }
