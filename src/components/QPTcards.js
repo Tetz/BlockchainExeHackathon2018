@@ -114,6 +114,7 @@ class SimpleBarChart extends Component {
 }
 
 const cardSize = {
+  minWidth: '300px',
   width: '21vw',
   margin: '24px'
 }
